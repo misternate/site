@@ -7,7 +7,14 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"name": "misternate"}
+    return {
+        "full_name": "Nate Edwards",
+        "handle":"misternate",
+        "social" : [{
+        "twitter": "https://twitter.com/misternate",
+        "github": "https://github.com/misternate"
+        }]
+    }
 
 
 @app.get("/items/{item_id}")
